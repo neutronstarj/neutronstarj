@@ -31,7 +31,7 @@ jobs:
         uses: Platane/snk@v3
         id: snake-gif
         with:
-          github_user_name: ${{ neutronstarj }}
+          github_user_name: ${{ https://github.com/neutronstarj }}
           outputs: |
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
@@ -42,8 +42,8 @@ jobs:
       - name: Show build status
         run: git status
 
-      - name: Push new files to the output branch
-        uses: crazy-max/ghaction-github-pages@v3.1.0
+      - name: generate-snake-game-from-github-contribution-grid
+        uses: Platane/snk@v3.2.0  
         with:
           target_branch: output
           build_dir: dist
